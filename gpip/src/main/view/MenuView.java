@@ -2,12 +2,14 @@ package main.view;
 
 import main.controller.CadastroController;
 import main.controller.LoginController;
+import main.services.*;
 
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class MenuView {
     public static void menu(){
+
         Scanner scanner = new Scanner(System.in);
         System.out.println("==================================");
         System.out.println("|             MENU               |");
@@ -36,5 +38,6 @@ public class MenuView {
             System.out.println("Opção inválida");
             menu();
         }
+        TerminalUtil.limparTerminal();
     }
 }

@@ -1,26 +1,27 @@
-package main.entity;
+package main.dto;
 
-import java.util.UUID;
+import main.entity.Localizacao;
+import main.entity.Usuario;
 
-public class Instituicao {
+public class InstituicaoDTO {
 
-    private UUID id;
+    private int id;
     private String nomeInstituicao;
     private Localizacao localizacao;
     private Usuario usuario;
 
-    public Instituicao(String nomeInstituicao, Localizacao localizacao, Usuario usuario) {
-        this.id = UUID.randomUUID();
+    public InstituicaoDTO(int id, String nomeInstituicao, Localizacao localizacao, Usuario usuario) {
+        this.id = id;
         this.nomeInstituicao = nomeInstituicao;
         this.localizacao = localizacao;
         this.usuario = usuario;
     }
 
-    public UUID getId() {
+    public int getId() {
         return id;
     }
 
-    public void setId(UUID id) {
+    public void setId(int id) {
         this.id = id;
     }
 

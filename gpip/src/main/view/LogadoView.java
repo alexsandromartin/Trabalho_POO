@@ -3,6 +3,7 @@ package main.view;
 import main.controller.PatrimonioController;
 import main.controller.RelatorioController;
 import main.controller.SalaController;
+import main.services.TerminalUtil;
 
 import java.util.InputMismatchException;
 import java.util.Scanner;
@@ -63,6 +64,7 @@ public class LogadoView {
             System.out.println("Opção inválida");
             MenuLogado(email);
         }
+        TerminalUtil.limparTerminal();
         scanner.close();
     }
 }
